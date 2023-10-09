@@ -1,0 +1,31 @@
+
+
+# testing data
+data/*
+tiles*
+lists/*
+grass/*
+*.lock
+*.h5
+*pycache*
+
+# VSCode
+.vscode/*
+
+# Mac
+**/.DS_Store
+.dbus*
+
+# History and AWS
+.aws
+.bash_history
+.cache
+.local
+.python_history
+
+# hide secrets
+.creds
+.config
+.ssh
+*.pem
+

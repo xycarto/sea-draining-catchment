@@ -12,4 +12,4 @@ else
     grass -c epsg:2193 -e grass/GRASS_ENV
 fi
 
-grass grass/GRASS_ENV/PERMANENT --exec bash src/make-catchments.sh
+grass grass/GRASS_ENV/PERMANENT --exec bash src/sea-drain.sh

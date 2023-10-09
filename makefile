@@ -3,6 +3,13 @@
 BASEIMAGE := xycarto/sea-draining
 IMAGE := $(BASEIMAGE):2023-10-09
 
+RUN ?= docker run -it --rm --net=host --user=$$(id -u):$$(id -g) \
+	-e DISPLAY=$$DISPLAY \
+	-e HOME=/work \
+	--env-file .creds \
+	-e RUN= -v$$(pwd):/work \
+	-w /work $(IMAGE)
+
 .PHONY: 
 
 ##### CATCHMENTS #####
@@ -11,6 +18,9 @@ select:
 
 catchment:
 	$(RUN) bash src/grass-build-catchment.sh
+
+sea-drain:
+	$(RUN) bash src/grass-build-sea-drain.sh
 
 	
 

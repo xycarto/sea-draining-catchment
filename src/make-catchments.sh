@@ -25,7 +25,7 @@ areasDEM="areasDEM"
 r.fill.dir input=dem output=$fillDEM direction=$directionDEM areas=$areasDEM --overwrite
 
 
-list=$(echo 1000000 500000 250000 100000 50000 25000 10000)
+list=$(echo 1000000 500000 250000 100000 50000 25000 10000 5000 2500)
 for i in $list
 do
     # Run watershed operation on fill sink raster
